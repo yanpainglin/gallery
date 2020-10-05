@@ -1,0 +1,318 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: sans-serif;
+}
+/*header */
+#header{
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    background: whitesmoke;
+}
+#header .logo{
+    width: 75px;
+    height: 20px;
+    border-radius: 7px;
+    margin-top: 27.5px;
+    margin-left: 10vw;
+}
+#menubar{
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+#sidepanel{
+  display: none;
+  width: 50px;
+  height: 75px;
+  cursor: pointer;
+}
+#sidepanel img{
+  background: whitesmoke;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 12.5px auto;
+}
+#menubar.active{
+  right: 0;
+  transition: all 1s;
+}
+#profile {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    z-index: 2;
+    text-align: right;
+}
+
+#profile a{
+    text-decoration: none;
+}
+#profile img{
+    width: 40px;
+    height: 40px;
+    margin-top: 17.5px;
+    border-radius: 100%;
+}
+#profile h4{
+    margin: 30px 0 0 15px;
+    text-align: right;
+    color: darkslateblue;
+}
+
+#profile .logout-button{
+    color: midnightblue;
+    display: block;
+    width: 75px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 17.5px 0 0 30px;
+}
+#profile .logout-button:hover{
+    background: white;
+    border-radius: 5px;
+}
+/*body*/
+#wrap{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    margin-top: 75px;
+}
+#upload-button{
+    display: none;
+}
+
+#upload-button button {
+    color: darkslateblue;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    background: whitesmoke;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+#upload-button button:hover{
+  background: grey;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: lightgrey;
+}
+#sidebar{
+    width: 25%;
+    height: auto;
+    position: fixed;
+    top: 100px;
+    left: 0;
+}
+#gallery{
+    width: 75%;
+    text-align: center;
+    position: absolute;
+    top: 75px;
+    left: 25%;
+    z-index: 0;
+}
+.date-container{
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: wrap row;
+}
+.date{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.date div{
+    width: 40%;
+    margin: auto 10px;
+}
+#gallery .photo{
+    width: 150px;
+    height: 130px;
+    text-align: center;
+    margin: 3% 0 0 0;
+
+}
+.img{
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+
+.form{
+    width: 80%;
+    margin: 5% auto;
+    text-align: center;
+    justify-content: center;
+
+}
+.form span{
+    display: none;
+    float: right;
+    width: 40px;
+    height: 40px;
+    background: #f0eded;
+    border-radius: 100%;
+    line-height: 40px;
+    cursor: pointer;
+    font-family:  sans-serif;
+}
+.form span:hover{
+  background: #e3dede;
+}
+h2{
+    color: darkslateblue;
+}
+input,textarea{
+    margin: 5px auto;
+    width: 85%;
+    height: 3vw;
+    border: solid 2px darkslateblue;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Times New Roman";
+}
+input[type="submit"]{
+    background: darkslateblue;
+    color: white;
+    cursor: pointer;
+
+}
+input[type="submit"]:hover{
+    background: blueviolet;
+}
+textarea{
+    height: 120px;
+    font-size: 1rem;
+    line-height: 50px;
+    resize: vertical;
+}
+
+::-webkit-input-placeholder{
+    font-size: 1.5rem;
+}
+input[type="file"]{
+   font-size: medium;
+    line-height: 2vw;
+
+}
+
+::-webkit-file-upload-button{
+    height: 100%;
+    background: darkslateblue;
+    color: white;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    line-height: 100%;
+    border-radius: 10px;
+}
+::-webkit-file-upload-button:hover{
+    background: blueviolet;
+
+}
+@media (max-width: 750px) {
+
+    input{
+        font-size: 1rem;
+    }
+    #sidepanel{
+      display: block;
+    }
+    #menubar{
+      position: fixed;
+      top:0;
+      width: 310px;
+      right: -250px;
+      transition: all .5s;
+    }
+    #menubar .nav{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background: grey;
+      width: 250px;
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+      background: #faf8f2;
+    }
+    #profile{
+      right: 0;
+      width: 250px;
+      height: 20%;
+      position: absolute;
+      z-index: 3;
+
+    }
+    #profile img{
+      margin-left: 20px;
+      background: red;
+    }
+    #profile .logout-button{
+      position: absolute;
+      top: 75px;
+      left: 40px;
+    }
+    #profile .logout-button:hover{
+      width: 150px;
+      height: 40px;
+      background: lightgrey;
+    }
+}
+
+@media screen and (max-width: 1200px){
+  #gallery{
+    margin: 3%;
+  }
+    #upload-button{
+        display: block;
+    }
+    #sidebar{
+        display: none;
+        width: 70%;
+        position: -webkit-sticky;
+        position: sticky;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        margin: 15% 0 15% 15%;
+        z-index: 2;
+        border-radius: 20px;
+    }
+
+    input{
+        height: 5vw;
+        line-height: 4vw;
+    }
+
+    #gallery{
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+    ::-webkit-input-placeholder{
+        font-size: 1rem;
+    }
+
+}
